@@ -1,23 +1,22 @@
-package com.iim.springboot.cotroller;
+package com.iim.springboot.controller;
 
 import com.iim.springboot.model.Forgeron;
-import com.iim.springboot.service.forgeronService;
+import com.iim.springboot.service.ForgeronService;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/forgeron")
 public class ForgeronController {
 
-    private final forgeronService forgeronService;
+    private final ForgeronService forgeronService;
 
-    public ForgeronController(forgeronService forgeronService) {
+    public ForgeronController(ForgeronService forgeronService) {
         this.forgeronService = forgeronService;
     }
 
-
     @GetMapping
-    public String helloWorld() {
-        return "HelloWorld";
+    public Forgeron getById(@RequestParam long id){
+        return forgeronService.getById(id);
     }
 
     @PostMapping

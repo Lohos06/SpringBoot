@@ -1,4 +1,4 @@
-package com.iim.springboot.cotroller;
+package com.iim.springboot.controller;
 
 import com.iim.springboot.model.metaux.Or;
 import com.iim.springboot.service.OrService;
