@@ -28,4 +28,8 @@ public class Or extends MetauxAbstractClass{
             System.out.println("Augmentez la temperature");
         }
     }
+
+    public Long getId() {
+        return this.id;
+    }
 }
