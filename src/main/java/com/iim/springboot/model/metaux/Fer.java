@@ -8,7 +8,7 @@ public class Fer extends MetauxAbstractClass{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    public Long id;
     float tauxCarbonne;
     String type;
 

@@ -11,6 +11,6 @@ public interface OrRepository extends JpaRepository<Or, Long> {
 
     @Modifying
     @Transactional
-    @Query("UPDATE Or o SET o.forme = :liquide WHERE o.id = :id")
-    int updateForme(@Param("id") Long id, @Param("liquide") String liquide);
+    @Query("UPDATE Or o SET o.forme = :forme WHERE o.id = :id")
+    int updateForme(@Param("id") Long id, @Param("forme") String forme);
 }

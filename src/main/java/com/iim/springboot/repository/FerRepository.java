@@ -11,6 +11,6 @@ public interface FerRepository extends JpaRepository<Fer, Long> {
 
     @Modifying
     @Transactional
-    @Query("UPDATE Fer f SET f.forme = :liquide WHERE f.id = :id")
-    int updateForme(@Param("id") Long id, @Param("liquide") String liquide);
+    @Query("UPDATE Fer f SET f.forme = :forme WHERE f.id = :id")
+    int updateForme(@Param("id") Long id, @Param("forme") String forme);
 }

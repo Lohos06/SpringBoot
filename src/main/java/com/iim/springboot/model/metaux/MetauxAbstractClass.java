@@ -5,9 +5,9 @@ import jakarta.persistence.MappedSuperclass;
 @MappedSuperclass
 public class MetauxAbstractClass {
 
-    String origine;
-    String forme;
-    float temperatureFonte;
+    public String origine;
+    public String forme;
+    public float temperatureFonte;
 
     public String getOrigine() {
         return this.origine;

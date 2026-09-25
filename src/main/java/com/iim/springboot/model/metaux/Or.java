@@ -8,7 +8,7 @@ public class Or extends MetauxAbstractClass{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    public Long id;
 
     public Or() {
     }

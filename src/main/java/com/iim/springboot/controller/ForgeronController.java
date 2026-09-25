@@ -29,4 +29,9 @@ public class ForgeronController {
         return forgeronService.fonte(id, type);
     }
 
+    @PutMapping("/forge")
+    public Long forge(@RequestParam Long id, @RequestParam String type, String forme) {
+        return forgeronService.forge(id, type, forme);
+    }
+
 }
