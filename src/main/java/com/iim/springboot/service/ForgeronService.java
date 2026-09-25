@@ -1,6 +1,7 @@
 package com.iim.springboot.service;
 
 import com.iim.springboot.model.Forgeron;
+import com.iim.springboot.repository.FerRepository;
 import com.iim.springboot.repository.ForgeronRepository;
 import org.springframework.stereotype.Service;
 
@@ -8,7 +9,6 @@ import org.springframework.stereotype.Service;
 public class ForgeronService {
 
     private final ForgeronRepository repository;
-
     public ForgeronService(ForgeronRepository repository) {
         this.repository = repository;
     }

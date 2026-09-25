@@ -1,9 +1,19 @@
 package com.iim.springboot.model.metaux;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "metaux_fer")
 public class Fer extends MetauxAbstractClass{
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     float tauxCarbonne;
     String type;
+
+    public Fer() {
+    }
 
     public Fer(String origine, float tauxCarbonne) {
         this.origine = origine;
@@ -59,5 +69,13 @@ public class Fer extends MetauxAbstractClass{
         else{
             System.out.println("Augmentez la temperature");
         }
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }

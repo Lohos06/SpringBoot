@@ -14,8 +14,15 @@ public class FerController {
         this.ferService = ferService;
     }
 
+    @GetMapping
+    public Fer getById(@RequestParam long id){
+        return ferService.getById(id);
+    }
+
     @PostMapping
-    public Fer create(@RequestParam String origine, @RequestParam float tauxCarbonne) {
+    public Fer create(
+            @RequestParam String origine,
+            @RequestParam float tauxCarbonne) {
         return ferService.create(origine, tauxCarbonne);
     }
 

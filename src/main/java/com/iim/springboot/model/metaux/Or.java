@@ -1,6 +1,17 @@
 package com.iim.springboot.model.metaux;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "metaux_or")
 public class Or extends MetauxAbstractClass{
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    public Or() {
+    }
 
     public Or(String origine) {
         this.origine = origine;

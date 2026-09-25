@@ -1,5 +1,8 @@
 package com.iim.springboot.model.metaux;
 
+import jakarta.persistence.MappedSuperclass;
+
+@MappedSuperclass
 public class MetauxAbstractClass {
 
     String origine;

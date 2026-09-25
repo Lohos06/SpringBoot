@@ -24,4 +24,9 @@ public class ForgeronController {
         return forgeronService.create(nom, maitrise);
     }
 
+    @PutMapping
+    public Forgeron fonte(@RequestParam Long id) {
+        return forgeronService.fonte(id);
+    }
+
 }

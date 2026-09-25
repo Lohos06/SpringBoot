@@ -2,10 +2,7 @@ package com.iim.springboot.controller;
 
 import com.iim.springboot.model.metaux.Or;
 import com.iim.springboot.service.OrService;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/or")
@@ -17,8 +14,14 @@ public class OrController {
         this.orService = orService;
     }
 
+    @GetMapping
+    public Or getById(@RequestParam long id){
+        return orService.getById(id);
+    }
+
     @PostMapping
-    public Or create(@RequestParam String origine) {
+    public Or create(
+            @RequestParam String origine) {
         return orService.create(origine);
     }
 
